@@ -23,12 +23,12 @@ A restaurant app that lets users input the names of burgers they'd like to eat a
 ```
 Several npm packages need to be installed: express, express-handlebars and mysql.
 ```
-[Deployed application](https://comingsoon.com)
+[Deployed application](https://git.heroku.com/sheltered-citadel-58173.git)
 
 ### Usage
 ```
 ```
-* Visit the url site, https://comingsoon.com. 
+* Visit the url site, https://git.heroku.com/sheltered-citadel-58173.git. 
 * Select an available burger from the menu on the left and click its 'Devour it!' button to "eat" it. * * The burger will move to the list on the right. 
 * Additionally, a user could enter their own burger via the text box and 'Add Burger' button. The new burger will appear in the available burger menu on the left. 
 * The page refreshes with tantalizing burger pictures if the user needs inspiration.
