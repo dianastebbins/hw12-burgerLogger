@@ -1,3 +1,11 @@
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  border: ridge, 1px, black;
+}
+
 li {
   padding: 5px;
   margin: 5px;
@@ -16,4 +24,9 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+      
+#burger_picture {
+  margin-top: 60px;
+  text-align: center;
 }

@@ -7,11 +7,31 @@ const router = express.Router();
 // import the model (burger.js) to use its database functions
 const burger = require("../models/burger.js");
 
+// picks a random burger picture to insert
+function burgerPicker() {
+  const burgerPicArray = [
+    {name:"burger", height:"250", width:"250"}, 
+    {name:"grill", height:"250", width:"350"}, // let wider pictures display nicely
+    {name:"plated", height:"250", width:"250"},  
+    {name:"sliders", height:"250", width:"350"},  
+    {name:"steaming", height:"250", width:"350"},
+    {name:"veggie", height:"250", width:"250"},
+    {name:"chicken", height:"250", width:"300"}
+  ];
+  const randomIndex = Math.floor(Math.random() * 7);
+  return burgerPicArray[randomIndex];
+}
+
 // create all routes and set up logic within those routes where required
 router.get("/", function(req, res) {
+  const displayBurger = burgerPicker();
+  
   burger.all(function(data) {
     const hbsObject = {
-      burgers: data
+      burgers: data,
+      pic_path: `/assets/images/${displayBurger.name}.jpg`,
+      pic_height: displayBurger.height,
+      pic_width: displayBurger.width
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
