@@ -21,7 +21,7 @@ function printQuestionMarks(num) {
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
   const arr = [];
-
+    
   // loop through the keys and push the key/value as a string int arr
   for (var key in ob) {
     let value = ob[key];
@@ -78,6 +78,7 @@ const orm = {
     let queryString = "UPDATE " + table;
 
     queryString += " SET ";
+    console.log("updateOne: " + objColVals);
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
